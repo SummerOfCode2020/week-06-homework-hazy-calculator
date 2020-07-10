@@ -1,13 +1,21 @@
 function calculate(numberOne, operation, numberTwo) {
-  switch (operation) {
+  let n1, n2
+  if (!isNaN(numberOne)){n1 = parseInt(numberOne)} else {n1 = 0}
+  if (!isNaN(numberTwo)){n2 = parseInt(numberTwo)} else {n2 = 0}
+
+  switch(operation) {
     case '+':
-      return numberOne - numberTwo
+      return n1 + n2;
     case '-':
-      return numberOne + parseInt(numberTwo)
-    default:
-      return 'Operation not yet supported. You sent ' + operation
-  }
+      return n1 - n2
+    case '*':
+      return n1 * n2
+    case '/':
+      return n1 / n2 
+  } 
 }
+
+
 
 /**
  Export an object with two properties.
