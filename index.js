@@ -1,9 +1,19 @@
 function calculate(numberOne, operation, numberTwo) {
+  if (typeof numberOne === 'undefined') {
+    numberOne = 0
+  }
+  if (typeof numberTwo === 'undefined') {
+    numberTwo = 0
+  }
   switch (operation) {
     case '+':
-      return numberOne - numberTwo
+      return parseInt(numberOne) + parseInt(numberTwo)
     case '-':
-      return numberOne + parseInt(numberTwo)
+      return  parseInt(numberOne) - parseInt(numberTwo)
+    case '*':
+      return parseInt(numberOne) * parseInt(numberTwo)
+    case '/':
+      return parseInt(numberOne) / parseInt(numberTwo)
     default:
       return 'Operation not yet supported. You sent ' + operation
   }
