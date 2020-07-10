@@ -1,9 +1,17 @@
 function calculate(numberOne, operation, numberTwo) {
+  if (isNaN(numberOne)) {
+    numberOne = 0
+  }
+  if (isNaN(numberTwo)) {
+    numberTwo = 0
+  }
   switch (operation) {
     case '+':
-      return numberOne - numberTwo
+      return parseInt(numberOne) + parseInt(numberTwo)
     case '-':
-      return numberOne + parseInt(numberTwo)
+      return parseInt(numberOne) - parseInt(numberTwo)
+    case '*':
+      return parseInt(numberOne) * parseInt(numberTwo)
     default:
       return 'Operation not yet supported. You sent ' + operation
   }
