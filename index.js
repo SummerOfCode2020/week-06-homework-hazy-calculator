@@ -1,13 +1,37 @@
 function calculate(numberOne, operation, numberTwo) {
-  switch (operation) {
-    case '+':
-      return numberOne - numberTwo
-    case '-':
-      return numberOne + parseInt(numberTwo)
-    default:
-      return 'Operation not yet supported. You sent ' + operation
+  if (typeof numberTwo === 'undefined') {
+    let numberTwo = 0
+
+    switch (operation) {
+      case '+':
+        return numberOne + numberTwo
+      case '-':
+        return numberOne - numberTwo
+      case '*':
+        return numberOne * numberTwo
+      default:
+        return 'Operation not yet supported. You sent ' + operation
+    }
+  } else {
+    switch (operation) {
+      case '+':
+        return parseInt(numberOne) + parseInt(numberTwo);
+      case '-':
+        return parseInt(numberOne) - parseInt(numberTwo);
+      case '*':
+        return numberOne * numberTwo;
+      default:
+        return 'Operation not yet supported. You sent ' + operation;
+    }
   }
 }
+// Console.log testing 
+console.log(calculate(1, '*', 3))
+console.log(calculate(1, '+', 3))
+console.log(calculate(1, '-', 3))
+console.log(calculate(1, '*', 0))
+console.log(calculate(20, '+', undefined))
+console.log(calculate(20, '/', 10))
 
 /**
  Export an object with two properties.
