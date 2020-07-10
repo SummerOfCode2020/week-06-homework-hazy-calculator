@@ -1,13 +1,28 @@
 function calculate(numberOne, operation, numberTwo) {
+  if (numberOne === undefined) {
+    numberOne = 0
+  }
+  if (numberTwo === undefined) {
+    numberTwo = 0
+  }
+
   switch (operation) {
     case '+':
-      return numberOne - numberTwo
+      return parseInt(numberOne) + parseInt(numberTwo)
     case '-':
-      return numberOne + parseInt(numberTwo)
+      return parseInt(numberOne) - parseInt(numberTwo)
+    case '*':
+      return parseInt(numberOne) * parseInt(numberTwo)
     default:
       return 'Operation not yet supported. You sent ' + operation
   }
 }
+
+// console logs to help visual it's working
+console.log(calculate(2, '+', 2))
+console.log(calculate(2, '-', 2))
+console.log(calculate(2, '*', 2))
+console.log(calculate(2, '+', undefined))
 
 /**
  Export an object with two properties.
