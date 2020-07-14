@@ -7,18 +7,19 @@ const { expect } = require('chai')
 const { calculate } = require('../index')
 
 describe('HazyCalculator takes three parameters', () => {
-
   /**
     This could also be written in one line as
    `expect(calculate(1, '+', 1)).to.equal(2)`
    */
   it('accepts an add operator as the second parameter to make calculations', () => {
     const result = calculate(1, '+', 1)
+
     expect(result).to.equal(2)
   })
 
   it('accepts a subtraction operator as the second parameter to make calculations', () => {
-    const result =  calculate(1, '-', 1)
+    const result = calculate(1, '-', 1)
+
     expect(result).to.equal(0)
   })
 
@@ -51,5 +52,4 @@ describe('HazyCalculator takes three parameters', () => {
   it('treats undefined values as zeroes in calculations', () => {
     expect(calculate(20, '+', undefined)).to.equal(20)
   })
-  
 })
