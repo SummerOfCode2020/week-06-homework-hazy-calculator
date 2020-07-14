@@ -32,4 +32,5 @@ function calculate(numberOne, operation, numberTwo) {
 module.exports = {
   calculate,
   features: 'Add, Subtract, etc.'
+  
 }
