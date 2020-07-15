@@ -1,4 +1,21 @@
 function calculate(numberOne, operation, numberTwo) {
+
+  if (numberOne === undefined) {
+    numberOne = 0
+  }
+
+  if (numberTwo === undefined) {
+    numberTwo = 0
+  }
+
+  switch (operation) {
+    case '+':
+      return parseInt(numberOne) + parseInt(numberTwo)
+    case '-':
+      return parseInt(numberOne) - parseInt(numberTwo)
+    case '*':
+      return parseInt(numberOne) * parseInt(numberTwo)
+  }
 }
 
 /**
